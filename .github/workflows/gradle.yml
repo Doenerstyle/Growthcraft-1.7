@@ -34,5 +34,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: ./gradlew build
-    - name: GitHub Release
-      uses: fnkr/github-action-ghr@v1
