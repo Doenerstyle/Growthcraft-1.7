@@ -131,13 +131,7 @@ dependencies {
     compile "curse.maven:thaumcraft-223628:2227552"
     compile "curse.maven:forestry-59751:2333823"
     //compile "com.mod-buildcraft:buildcraft:${bc_version}:dev"
-    // downloading BuildCraft jar directly from their website
-    def f = new File("libs/buildcraft-${bc_version}-dev.jar")
-    if( !f.exists() ) {
-        mkdir "libs"
-        new URL("https://www.mod-buildcraft.com/releases/BuildCraft/${bc_version}/buildcraft-${bc_version}-dev.jar").withInputStream{ i -> f.withOutputStream{ it << i }}
-    }
-    implementation files("libs/buildcraft-${bc_version}-dev.jar")
+    compile "curse.maven:buildcraft-61811:2322106"
     testCompile "junit:junit:4.11"
 }
 
