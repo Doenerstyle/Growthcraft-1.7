@@ -33,7 +33,7 @@ group = "mod.growthcraft"
 archivesBaseName = "growthcraft"
 
 ext.growthcraftApi = "src/java/growthcraft/api"
-ext.forestryApiRoot = "api/ForestryAPI"
+//ext.forestryApiRoot = "api/ForestryAPI"
 
 class StructExtApi {
     String name
@@ -46,7 +46,7 @@ class StructExtApi {
 
 StructExtApi[] apis = [
     new StructExtApi(name: "buildcraft", api: "api/buildcraft/api", exclusion: "**/buildcraft/api/meh"),
-    new StructExtApi(name: "forestry", api: "api/ForestryAPI/forestry/api", exclusion: "**/forestry/api/**", root: ext.forestryApiRoot),
+    //new StructExtApi(name: "forestry", api: "api/ForestryAPI/forestry/api", exclusion: "**/forestry/api/**", root: ext.forestryApiRoot),
     new StructExtApi(name: "invtweaks", api: "api/invtweaks/api", exclusion: "**/invtweaks/api/**"),
     new StructExtApi(name: "mfr", api: "api/powercrystals/minefactoryreloaded/api", exclusion: "**/powercrystals/minefactoryreloaded/api/**"),
     //new StructExtApi(name: "thaumcraft", api: ext.thaumcraftApi, exclusion: "**/thaumcraft/api/**"),
@@ -128,6 +128,7 @@ dependencies {
     compile "codechicken:CodeChickenCore:${minecraft_version}-${code_chicken_core_version}:dev"
     compile "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:dev"
     compile "curse.maven:thaumcraft-223628:2227552"
+    compile "curse.maven:forestry-59751:2333823"
     //compile "com.mod-buildcraft:buildcraft:${bc_version}:dev"
     // downloading BuildCraft jar directly from their website
     def f = new File("libs/buildcraft-${bc_version}-dev.jar")
